@@ -5,7 +5,19 @@ working section and article navigation.
 
 [railsguide]:http://guides.rubyonrails.org/
 
-![screen]:https://github.com/danchoi/docrails_kindle/raw/master/images/screen1-sm.gif
+![screen]:(https://github.com/danchoi/docrails_kindle/raw/master/images/screen1-sm.gif)
+
+## Download Guide
+
+If you just want to download the ebook I generated with this tool, here it is:
+
+[Rails Guides]:https://github.com/danchoi/docrails_kindle/raw/master/mobi/rails-guide.2012-01-18.mobi
+
+
+
+To generate the Rails Guides ebook yourself, read on. 
+
+
 
 ## Install
 
