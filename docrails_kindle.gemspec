@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.email       = ["dhchoi@gmail.com"]
   s.homepage    = "http://github.com/danchoi/docrails_kindle"
   s.summary     = %q{Read Rails Guides for your Kindle}
-  s.description     = %q{Read Rails Guides for your Kindle}
+  s.description = %q{Read Rails Guides for your Kindle}
 
   s.rubyforge_project = "docrails_kindle"
 
