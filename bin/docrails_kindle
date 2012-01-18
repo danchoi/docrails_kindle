@@ -42,11 +42,7 @@ fdoc = Nokogiri::HTML(html)
 
 # need to turn author h3's into h4's
 fdoc.search("h3").each { |h3|
-  if h3[:class] != 'section'
-    h3.name = 'h4'
-  else # add an id
-    h3['id'] = h3.inner_text.gsub(/\s/, '-')
-  end
+  h3.name = 'h4'
 }
 fdoc.search("h2").each { |h2| 
   h2.name = 'h3'
@@ -58,6 +54,7 @@ File.open("frontmatter.html",'w'){|f| f.puts fdoc.to_html}
 html_pages.unshift "frontmatter.html"
 
 puts "=> Making one section folder per original HTML file"
+FileUtils::rm_rf("sections/")
 
 html_pages.each_with_index { |page, section_idx|
   FileUtils::mkdir_p("sections/%03d" % section_idx)
