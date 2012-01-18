@@ -43,7 +43,7 @@ Download [KindleGen 2][kindlegen] and put it on your PATH.
 
 ## How to use
 
-    gem install railsguides_kindle
+    gem install docrails_kindle
     git clone git@github.com:lifo/docrails.git
     cd docrails/railties/guides
     KINDLE=1 rake generate_guides
