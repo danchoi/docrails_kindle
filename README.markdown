@@ -8,8 +8,8 @@ Guides][railsguide] with working section and article navigation.
 ![screen](https://github.com/danchoi/docrails_kindle/raw/master/images/screen1-sm.gif)
 
 The DocRails project does provide its own experimental Rake task to generate a
-Kindle version of the Rails Guides. However, its new section and article
-navigation doesn't work correctly.
+Kindle version of the Rails Guides. However, its section and article
+navigation doesn't work correctly (at least on a Kindle Touch).
 
 ## Download Guide
 
