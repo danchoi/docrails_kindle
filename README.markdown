@@ -5,6 +5,8 @@ working section and article navigation.
 
 [railsguide]:http://guides.rubyonrails.org/
 
+![screen]:https://github.com/danchoi/docrails_kindle/raw/master/images/screen1-sm.gif
+
 ## Install
 
     gem install docrails_kindle
