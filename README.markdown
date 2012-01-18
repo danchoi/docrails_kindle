@@ -52,8 +52,9 @@ You can transfer this mobi file to your Kindle.
 
 ## Contribute
 
-This program is a rough prototype. Some internal links may not work. Other
-defects in the resulting ebook may exist. Please file issues.
+This program is a rough prototype. Some internal links may not work. The css
+styling may need to be improved. Other bugs may exist. Please file issues or
+fork and submit pull requests.
 
 Also, if the DocsRails team would like to incorporate and adapt this code for
 their project, please go for it. 
