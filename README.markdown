@@ -64,8 +64,11 @@ This program is a rough prototype. Some internal links may not work. The css
 styling may need to be improved. Other bugs may exist. Please file issues or
 fork and submit pull requests.
 
-Also, if the DocsRails team would like to incorporate and adapt this code for
-their project, please go for it. 
+This code has also been adapted into a Rails commit and submitted as a [pull
+request][pull].
+
+[pull]:https://github.com/rails/rails/pull/4526
+
 
 
 ## Author
