@@ -92,7 +92,7 @@ x = Nokogiri::XML(File.open("rails_guides.opf")).remove_namespaces!
 
 document = {
   'doc_uuid' => x.at("package")['unique-identifier'],
-  'title' => x.at("title").inner_text,
+  'title' => x.at("title").inner_text.gsub(/\(.*$/, " v2"),
   'publisher' => x.at("publisher").inner_text,
   'author' => x.at("creator").inner_text,
   'subject' => x.at("subject").inner_text,
