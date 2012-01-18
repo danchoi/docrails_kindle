@@ -15,10 +15,8 @@ If you just want to download the ebook I generated with this tool, here it is:
 
 [mobi]:https://github.com/danchoi/docrails_kindle/raw/master/mobi/rails-guide.2012-01-18.mobi
 
-
-
-To generate the Rails Guides ebook yourself, read on. 
-
+But to keep up with updates to the Rails Guides, you may want to periodically
+generate the Rails Guides ebook yourself. For this, please read on.
 
 
 ## Install
@@ -53,8 +51,8 @@ You can transfer this mobi file to your Kindle.
 This program is a rough prototype. Some internal links may not work. Other
 defects in the resulting ebook may exist. Please file issues.
 
-Also, if the `docsrails` team would like to incorporate this into their
-`rake` tasks code, please take and modify my code as you see fit.
+Also, if the DocsRails team would like to incorporate and adapt this code for
+their project, please go for it. 
 
 
 ## Author
