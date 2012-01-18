@@ -3,15 +3,15 @@ $:.push File.expand_path("../lib", __FILE__)
 
 Gem::Specification.new do |s|
   s.name        = "docrails_kindle"
-  s.version     = '0.0.3'
+  s.version     = '0.0.4'
   s.platform    = Gem::Platform::RUBY
   s.required_ruby_version = '>= 1.9.0'
 
   s.authors     = ["Daniel Choi"]
   s.email       = ["dhchoi@gmail.com"]
   s.homepage    = "http://github.com/danchoi/docrails_kindle"
-  s.summary     = %q{Read Rails Guides for your Kindle}
-  s.description = %q{Read Rails Guides for your Kindle}
+  s.summary     = %q{Read Rails Guides on your Kindle}
+  s.description = %q{Read Rails Guides on your Kindle}
 
   s.rubyforge_project = "docrails_kindle"
 
