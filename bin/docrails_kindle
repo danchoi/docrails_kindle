@@ -5,6 +5,19 @@ require 'fileutils'
 require 'yaml'
 require 'date'
 
+def add_head_section(doc, title)
+  head = Nokogiri::XML::Node.new "head", doc
+  title_node = Nokogiri::XML::Node.new "title", doc
+  title_node.content = title
+  title_node.parent = head
+  css = Nokogiri::XML::Node.new "link", doc
+  css['rel'] = 'stylesheet'
+  css['type'] = 'text/css'
+  css['href'] = "#{Dir.pwd}/stylesheets/kindle.css"
+  css.parent = head
+  doc.at("body").before head
+end
+
 # Get html pages in document order
 
 html_pages = Nokogiri::XML(File.read("toc.ncx")).search("navMap//content[@src]").map {|c| c[:src]}.uniq
@@ -40,13 +53,8 @@ fdoc.search("h2").each { |h2|
   h2['id'] = h2.inner_text.gsub(/\s/, '-')
 }
 
-head = Nokogiri::XML::Node.new "head", fdoc
-title_node = Nokogiri::XML::Node.new "title", fdoc
-title_node.content = "Frontmatter"
-title_node.parent = head
-fdoc.at("body").before head
+add_head_section fdoc, "Frontmatter"
 File.open("frontmatter.html",'w'){|f| f.puts fdoc.to_html}
-
 html_pages.unshift "frontmatter.html"
 
 puts "=> Making one section folder per original HTML file"
@@ -66,12 +74,7 @@ html_pages.each_with_index { |page, section_idx|
     item = Nokogiri::HTML(h3.to_html + content.join("\n"))
     item_path = "sections/%03d/%03d.html" % [section_idx, item_idx] 
 
-    # add head node and title node
-    head = Nokogiri::XML::Node.new "head", item
-    title_node = Nokogiri::XML::Node.new "title", item
-    title_node.content = subsection
-    title_node.parent = head
-    item.at("body").before head
+    add_head_section item, subsection
 
     # fix all image links
     item.search("img").each { |img|
@@ -97,8 +100,8 @@ document = {
   'author' => x.at("creator").inner_text,
   'subject' => x.at("subject").inner_text,
   'date' => x.at("date").inner_text,
-  'cover' => x.at("item[@id=cover]")[:href],
-  'masthead' => x.at("item[@id=cover]")[:href],
+  'cover' => "#{Dir.pwd}/images/rails_guides_kindle_cover.jpg", 
+  'masthead' => nil,
   'mobi_outfile' => "rails-guide.#{Date.today.to_s}.mobi"
 }
 puts document.inspect
