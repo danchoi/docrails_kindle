@@ -1,7 +1,5 @@
 #!/usr/bin/env ruby
 
-# take toc.ncx
-
 require 'nokogiri'
 require 'fileutils'
 require 'yaml'
