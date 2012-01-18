@@ -12,6 +12,13 @@ The DocRails project does provide its own experimental Rake task to generate a
 Kindle version of the Rails Guides. However, its section and article
 navigation doesn't work correctly (at least on a Kindle Touch).
 
+This tool depends on the [kindlerb][kindlerb] gem, which decouples the process
+of structuring a ebook document into sections and articles from the low-level
+details of OPF and NCX templating.
+
+[kindlerb]:https://github.com/danchoi/kindlerb
+
+
 ## If you just want the eBook
 
 If you just want to download the ebook I generated with this tool, here it is:
