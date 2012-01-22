@@ -23,9 +23,9 @@ details of OPF and NCX templating.
 
 If you just want to download the ebook I generated with this tool, here it is:
 
-[Download Rails Guides ebook][mobi]
+* [Download Ruby on Rails Guides for Kindle][railsguides-mobi]
 
-[mobi]:https://github.com/danchoi/docrails_kindle/raw/master/mobi/rails-guide.2012-01-18.mobi
+[railsguides-mobi]:https://github.com/downloads/danchoi/docs_on_kindle/rails-guide.2012-01-18.mobi
 
 But to keep up with updates to the Rails Guides, you may want to periodically
 generate the Rails Guides ebook yourself. For this, please read on.
